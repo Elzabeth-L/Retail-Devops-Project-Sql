@@ -11,11 +11,11 @@ spec:
           type: PathPrefix
           value: /retail
     filters:
-      type: URLRewrite
-      URLRewrite:
-        path:
-          type: ReplacePrefixMatch
-          replacePrefixMatch: /
+      - type: URLRewrite
+        urlRewrite:
+          path:
+            type: ReplacePrefixMatch
+            replacePrefixMatch: /
     backendRefs:
       - name: capsule-service
         port: 80
